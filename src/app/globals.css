@@ -31,3 +31,37 @@ body {
     text-wrap: balance;
   }
 }
+
+main {
+  @apply flex min-h-screen flex-col items-center p-5 lg:px-24
+}
+
+code {
+  @apply rounded-md
+}
+
+h1 {
+  @apply text-3xl font-bold
+}
+
+h2 {
+  @apply text-2xl font-bold
+}
+
+h3 {
+  @apply text-xl font-bold
+}
+
+
+article {
+  @apply my-5 flex flex-col gap-5 w-full
+}
+
+article ul {
+  @apply ps-10
+}
+
+article li {
+  @apply list-disc
+}
+

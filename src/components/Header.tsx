@@ -1,4 +1,7 @@
 import Link from "next/link";
+import LogoName from "./LogoName";
+import { usePathname } from "next/navigation";
+import MenuItem from "./MenuItem";
 
 const routes: Route[] = [
   {
@@ -16,16 +19,16 @@ const routes: Route[] = [
 ]
 
 export default function Header() {
+  
   return(
-    <header className="p-8 flex justify-between border-b">
-      <Link href={'/'} className="text-xl font-bold">MFontova</Link>
+    <header className="p-8 flex flex-col justify-between items-center gap-10 border-b">
+      {/* <Link href={'/'} className="text-xl font-bold">{`{ MFontova }`}</Link> */}
+      <LogoName/>
       <nav>
         <ul className="flex gap-10">
           {
             routes.map(route => (
-              <li key={route.path}>
-                <Link className="hover:underline transition-all" href={route.path}>{route.label}</Link>
-              </li>
+              <MenuItem route={route} key={route.path} />
             ))
           }
         </ul>

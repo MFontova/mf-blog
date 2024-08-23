@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fira_Mono, Onest } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import "highlight.js/styles/github.css"
+import { onest } from "@/lib/fontsConfig";
 
-const inter = Inter({ subsets: ["latin"] });
+// export const inter = Inter({ subsets: ["latin"] });
+// export const firaMono = Fira_Mono({subsets: ["latin"], weight: "500"})
+// export const onest = Onest({subsets: ["latin"]})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="es">
+      <body className={onest.className}>
         <Header/>
         {children}
       </body>
