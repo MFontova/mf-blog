@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { Post } from '@/interfaces/post'
 
 const postsDirectory = path.join(process.cwd(), 'src/posts')
 
@@ -19,10 +20,16 @@ export function getSortedPostsData() {
 
     console.log('matterResult', matterResult)
 
-    return {
+    const post: Post = {
       id,
-      ...matterResult.data
+      title: matterResult.data.title,
+      date: matterResult.data.date,
+      description: matterResult.data.description,
+      content: matterResult.content,
+      tags: matterResult.data.tags
     }
+
+    return post
   })
 
   return allPostsData.sort((a, b) => {

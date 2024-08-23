@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formkit/tempo": "^0.1.2",
     "gray-matter": "^4.0.3",
     "next": "14.2.6",
     "react": "^18",
