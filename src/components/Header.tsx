@@ -21,7 +21,7 @@ const routes: Route[] = [
 export default function Header() {
   
   return(
-    <header className="p-8 flex flex-col justify-between items-center gap-10 border-b">
+    <header className="p-8 flex flex-col md:flex-row justify-between items-center gap-10 border-b">
       {/* <Link href={'/'} className="text-xl font-bold">{`{ MFontova }`}</Link> */}
       <LogoName/>
       <nav>

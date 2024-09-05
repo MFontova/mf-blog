@@ -37,8 +37,8 @@ export default function LogoName() {
   }
 
   return (
-    <Link href={'/'}>
-      <div className="flex items-center justify-center w-52 text-center" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <Link href={'/'} className="p-3" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className="flex items-center justify-center w-52 text-center">
         <span className={`text-xl font-medium cursor-pointer transition duration-300 ${firaMono.className}`}>
           {text}
         </span>

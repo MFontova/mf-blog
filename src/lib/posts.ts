@@ -6,6 +6,7 @@ import { Post } from '@/interfaces/post'
 const postsDirectory = path.join(process.cwd(), 'src/posts')
 
 export function getSortedPostsData() {
+  console.log('get sorted posts data')
   const fileNames = fs.readdirSync(postsDirectory)
   const allPostsData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, '')

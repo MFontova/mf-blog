@@ -9,7 +9,6 @@ import javascript from "highlight.js/lib/languages/javascript.js"
 export default function PostContent({content}: {content: string}) {
   useEffect(() => {
     hljs.registerLanguage('javascript', javascript);
-    // hljs.highlight(content, {language: 'javascript'})
     hljs.highlightAll()
   }, [content])
   return (

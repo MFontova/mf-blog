@@ -1,5 +1,5 @@
 ---
-title: useState() React Hook
+title: Entiende el hook de React useState()
 date: 2024-08-22
 description: En este artículo entenderemos cómo funciona el hook useState
 tags: [react, typescript]

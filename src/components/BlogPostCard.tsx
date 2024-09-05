@@ -13,11 +13,11 @@ export default function BlogPostCard ({post}: {post: Post}) {
           </div>
           <p className="mt-5">{post.description}</p>
         </div>
-        <div className="flex gap-3 pt-3">
+        {/* <div className="flex gap-3 pt-3">
           {
             post.tags.map(tag => <p className="text-sm rounded-full border px-2" key={tag}>{tag}</p>)
           }
-        </div>
+        </div> */}
       </section>
     </Link>
   )

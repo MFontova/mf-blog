@@ -1,5 +1,5 @@
 ---
-title: useEffect() React Hook
+title: Entiende el hook de React useEffect()
 date: 2024-08-22
 description: En este artículo entenderemos cómo funciona el hook useEffect
 tags: [react, typescript]
@@ -7,7 +7,7 @@ tags: [react, typescript]
 
 El hook `useEffect` es uno de los hooks fundamentales de React, junto con `useState`. Este hook nos permite ejecutar efectos secundarios en los componentes funcionales. Antes de `useEffect`, los efectos secundarios se manejaban en los métodos de ciclo de vida de los componentes de clase, como `componentDidMount`, `componentDidUpdate`, y `componentWillUnmount`. Ahora, `useEffect` nos proporciona una forma más limpia y poderosa de manejar estos casos en componentes funcionales.
 
-### ¿Qué es un Efecto Secundario?
+## ¿Qué es un Efecto Secundario?
 
 En React, un efecto secundario es cualquier cosa que afecte algo fuera del ámbito del componente en sí. Algunos ejemplos comunes de efectos secundarios incluyen:
 
@@ -18,7 +18,7 @@ En React, un efecto secundario es cualquier cosa que afecte algo fuera del ámbi
 
 ---
 
-### Sintaxis Básica de `useEffect`
+## Sintaxis Básica de `useEffect`
 
 La sintaxis básica de `useEffect` es la siguiente:
 
@@ -33,7 +33,7 @@ useEffect(() => {
 
 ---
 
-### Ejemplo básico de `useEffect`
+## Ejemplo básico de `useEffect`
 
 Vamos a ver un ejemplo básico de cómo usar useEffect para registrar un mensaje en la consola cuando el componente se renderiza por primera vez:
 
@@ -58,7 +58,7 @@ En este ejemplo:
 
 ---
 
-### Efectos con Dependencias
+## Efectos con Dependencias
 
 `useEffect` también puede responder a cambios en variables específicas. Por ejemplo, si queremos ejecutar un efecto solo cuando una variable de estado `count` cambia, haríamos lo siguiente:
 
@@ -89,7 +89,7 @@ Aquí:
 
 ---
 
-### Limpiar Efectos
+## Limpiar Efectos
 
 Algunos efectos secundarios requieren limpieza para evitar fugas de memoria o comportamientos inesperados. Por ejemplo, al subscribirse a un evento, querrás desuscribirte cuando el componente se desmonte. Puedes hacerlo devolviendo una función de limpieza desde el efecto:
 
@@ -120,7 +120,7 @@ En este ejemplo:
 
 ---
 
-### Efectos que dependen de Props o Estado
+## Efectos que dependen de Props o Estado
 
 Puedes usar `useEffect` para realizar una acción cuando cambian múltiples dependencias. Aquí hay un ejemplo en el que el efecto se ejecuta cuando cambian las variables `count` o `otherValue`:
 
@@ -154,7 +154,7 @@ export default MultiDependencyEffect
 
 ---
 
-### Conclusión
+## Conclusión
 
 El hook useEffect es una herramienta poderosa para manejar efectos secundarios en componentes funcionales de React. Ya sea para ejecutar código una sola vez cuando el componente se monta, o para responder a cambios en el estado o las props, useEffect te ofrece una forma declarativa y limpia de gestionar estas tareas.
 
